@@ -439,9 +439,7 @@
     <div class="memory-form">
       <p class="form-title">Déposer un souvenir</p>
       <div class="success-msg" id="success-msg">Votre souvenir a été ajouté. Merci.</div>
-      <form name="souvenirs" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="submitMemory(event)">
-        <input type="hidden" name="form-name" value="souvenirs">
-        <p style="display:none"><input name="bot-field"></p>
+      <form action="https://formspree.io/f/mlgzopjj" method="POST" onsubmit="submitMemory(event)">
         <div class="form-row">
           <div class="form-group">
             <label for="author">Votre prénom</label>
@@ -507,13 +505,23 @@
     btn.setAttribute('aria-selected', 'true');
   }
 
-  function submitMemory() {
+  function submitMemory(e) {
+    if (e) e.preventDefault();
     const author = document.getElementById('author').value.trim();
     const relation = document.getElementById('relation').value.trim();
     const text = document.getElementById('memory-text').value.trim();
     if (!author || !text) {
       alert('Merci d\'indiquer votre prénom et votre souvenir.');
       return;
+    }
+
+    // Envoi à Formspree
+    if (e && e.target) {
+      const data = new FormData(e.target);
+      fetch('https://formspree.io/f/mlgzopjj', {
+        method: 'POST', body: data,
+        headers: { 'Accept': 'application/json' }
+      }).catch(err => console.log('Formspree error:', err));
     }
 
     const empty = document.getElementById('empty-state');
