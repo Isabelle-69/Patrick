@@ -427,8 +427,13 @@
   <div style="position:relative; z-index:1;">
     <p class="memories-list-label">Souvenirs déposés</p>
     <div id="memories-list">
-      <div class="empty-state" id="empty-state">
-        Soyez le premier à laisser un souvenir ici.
+      <div class="memory-card">
+        <div class="author">Isabelle</div>
+        <div class="text">2 ans que tu es parti, ton absence prend encore beaucoup de place, partager nos souvenirs pour faire vivre ta mémoire.... on verra ce qu'on fait de ce lieu...</div>
+        <div class="card-footer">
+          <span class="date">10 mai 2026</span>
+          <button class="delete-btn" onclick="this.closest('.memory-card').remove()">Supprimer</button>
+        </div>
       </div>
     </div>
   </div>
@@ -463,7 +468,7 @@
   <div id="photos" class="section" role="tabpanel">
     <p class="photos-intro">Ses moments en images</p>
     <div class="photo-grid" id="photo-grid"></div>
-    <p class="photo-caption">Cliquez sur une case pour ajouter une photo depuis votre appareil.</p>
+    <p class="photo-caption">Si vous voulez ajouter une photo, envoyez-la à <a href="mailto:isabelle.faillenot@univ-st-etienne.fr" style="color:var(--terre);text-decoration:underline;">Isabelle</a>.</p>
   </div>
 
 </div>
