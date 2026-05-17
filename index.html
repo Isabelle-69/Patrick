@@ -269,13 +269,14 @@
   }
 
   .memory-card {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.25);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 1.25rem 1.5rem;
     margin-bottom: 1rem;
     position: relative;
     border-left: 3px solid var(--ocre-light);
+    backdrop-filter: blur(4px);
   }
 
   .memory-card .author {
@@ -427,6 +428,14 @@
   <div style="position:relative; z-index:1;">
     <p class="memories-list-label">Souvenirs déposés</p>
     <div id="memories-list">
+      <div class="memory-card">
+        <div class="author">Isabelle</div>
+        <div class="text">Pour notre premier rendez-vous, on s'était retrouvé à la fourmi pour regarder un film de Hal Hartley. Tu portais ton chapeau qui t'allait si bien, mais quelle dégaine en survêtement des années 80 et tes mocassins !! et en plus tu mangeais du fromage avec du chocolat ! Le moins qu'on puisse dire est que tu ne te préoccupais pas de ton apparence !</div>
+        <div class="card-footer">
+          <span class="date"></span>
+          <button class="delete-btn" onclick="this.closest('.memory-card').remove()">Supprimer</button>
+        </div>
+      </div>
       <div class="memory-card">
         <div class="author">JC</div>
         <div class="text">Oh merciiiii de cette initiative, Isabelle ! Oui il prend tellement de place dans ma vie ce gros trou, que tu laisses Patrick !</div>
