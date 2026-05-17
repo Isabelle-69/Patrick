@@ -428,6 +428,14 @@
     <p class="memories-list-label">Souvenirs déposés</p>
     <div id="memories-list">
       <div class="memory-card">
+        <div class="author">JC</div>
+        <div class="text">Oh merciiiii de cette initiative, Isabelle ! Oui il prend tellement de place dans ma vie ce gros trou, que tu laisses Patrick !</div>
+        <div class="card-footer">
+          <span class="date">16 mai 2026</span>
+          <button class="delete-btn" onclick="this.closest('.memory-card').remove()">Supprimer</button>
+        </div>
+      </div>
+      <div class="memory-card">
         <div class="author">Isabelle</div>
         <div class="text">2 ans que tu es parti, ton absence prend encore beaucoup de place, partager nos souvenirs pour faire vivre ta mémoire.... on verra ce qu'on fait de ce lieu...</div>
         <div class="card-footer">
@@ -606,7 +614,7 @@ const PHOTOS = [
   });
 
   // Cases vides pour ajouter de nouvelles photos
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 1; i++) {
     const slot = document.createElement('div');
     slot.className = 'photo-slot';
     slot.innerHTML = `
