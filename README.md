@@ -1,7 +1,7 @@
 # Patrick
 
 Quand je reçois un message de formspree, j’envoie le souvenir a claude dans la conversation « memorial… »
-Je telecharge le html, le renomme index dans « /image/2024/photoPapa
+Je telecharge le index.html, le deplace dans  « /image/2024/photoPapa
 J’ouvre le github : https://github.com/Isabelle-69/Patrick
 Mon ID pour ce github : isabelle.faillenot@inserm.fr
 
